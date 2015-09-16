@@ -69,3 +69,35 @@ while(xx<10){
     cat("lucky number", xx, "/n")
     }else{cat("not excited about the number",xx,"/n")}}
 print(xx)
+
+
+#pseudocode
+#set sample size to 100
+#Set R to 1.05 for yearly growth
+#Loop code to simulate population growth over a 10 year period
+#Plot growth over time
+#X axis represents time
+#Y axis reprents population
+
+#geometric model from scratch
+N0 <- 100
+RR <- 1.05
+ttMax <- 10
+NN<-matrix(NA, nrow = 1, ncol = ttMax+1)
+NN[1]<-N0
+for(tt in 1:ttMax){NN[tt+1]<-RR*NN[tt]}
+NN
+
+plot(1:(ttMax+1), NN, xlab="time", ylab = "N", col="purple")
+
+#3.2.1
+N0 <- 100
+RR <- .8
+ttMax <- 10
+NN<-matrix(NA, nrow = 1, ncol = ttMax+1)
+NN[1]<-N0
+for(tt in 1:ttMax){NN[tt+1]<-RR*NN[tt]}
+NN
+
+plot(1:(ttMax+1), NN, xlab="time", ylab = "N", col="purple")
+
